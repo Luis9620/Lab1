@@ -27,7 +27,7 @@ def password_max(password_size):
 
 def bruteforce(password_guess, password_MAX, password_size,number_of_users):
     if number_of_users == len(hash_password):
-        print("finished")
+        return print("finished")
     for i in range(0, password_MAX, 1):
         password_guess = '{:d}'.format(i).zfill(password_size)
         password_and_salt = str(password_guess) + salt_value[number_of_users]
